@@ -1,0 +1,12 @@
+@font-face {
+  font-family: commodore;
+  src: url(../font/commodore-64.TTF);
+}
+
+* {
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: 'commodore';
+}
