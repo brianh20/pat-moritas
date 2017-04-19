@@ -17,7 +17,9 @@ var app = {
 
 app.initialize();
 var randomGif = Math.floor(Math.random() * 5 + 1);
+var switchGif = randomGif;
 var currentSong = 1;
+nextSong();
 
 function nextSong() {
     document.getElementById('songPlayer' + currentSong).pause();
@@ -33,8 +35,11 @@ function nextSong() {
     };
 
 
-    randomGif = Math.floor(Math.random() * 5 + 1);
-    document.getElementById('gifDisplay').src = './img/giphy_' + randomGif + '.gif';
+    switchGif = Math.floor(Math.random() * 5 + 1);
+    if (randomGif !== switchGif) {
+        randomGif = switchGif;
+        document.getElementById('gifDisplay').src = './img/giphy_' + randomGif + '.gif';
+    }
 
 }
 
