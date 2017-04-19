@@ -43,21 +43,21 @@ function nextSong() {
 
 }
 
-function prevSong() {
-    document.getElementById('songPlayer' + currentSong).pause();
-    document.getElementById('songPlayer' + currentSong).currentTime = 0;
-    if (currentSong > 1) {
-        currentSong -= 1;
-    } else {
-        currentSong = 4;
-    }
-    document.getElementById('songPlayer' + currentSong).play();
-}
+// function prevSong() {
+//     document.getElementById('songPlayer' + currentSong).pause();
+//     document.getElementById('songPlayer' + currentSong).currentTime = 0;
+//     if (currentSong > 1) {
+//         currentSong -= 1;
+//     } else {
+//         currentSong = 4;
+//     }
+//     document.getElementById('songPlayer' + currentSong).play();
+// }
 
-function playSong() {
-    document.getElementById('songPlayer' + currentSong).play();
-}
+// function playSong() {
+//     document.getElementById('songPlayer' + currentSong).play();
+// }
 
-function stopSong() {
-    document.getElementById('songPlayer' + currentSong).pause();
-}
+// function stopSong() {
+//     document.getElementById('songPlayer' + currentSong).pause();
+// }
