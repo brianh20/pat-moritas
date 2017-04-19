@@ -16,11 +16,43 @@ var app = {
 };
 
 app.initialize();
+var randomGif = Math.floor(Math.random() * 5 + 1);
+var currentSong = 1;
 
 function nextSong() {
-    document.getElementById('songPlayer').play();
+    document.getElementById('songPlayer' + currentSong).pause();
+    document.getElementById('songPlayer' + currentSong).currentTime = 0; // mas flashero sin esto
+    if (currentSong < 4) {
+        currentSong += 1;
+    } else {
+        currentSong = 1;
+    }
+    document.getElementById('songPlayer' + currentSong).play();
+    document.getElementById('songPlayer' + currentSong).onended = function() {
+        nextSong();
+    };
+
+
+    randomGif = Math.floor(Math.random() * 5 + 1);
+    document.getElementById('gifDisplay').src = './img/giphy_' + randomGif + '.gif';
+
+}
+
+function prevSong() {
+    document.getElementById('songPlayer' + currentSong).pause();
+    document.getElementById('songPlayer' + currentSong).currentTime = 0;
+    if (currentSong > 1) {
+        currentSong -= 1;
+    } else {
+        currentSong = 4;
+    }
+    document.getElementById('songPlayer' + currentSong).play();
+}
+
+function playSong() {
+    document.getElementById('songPlayer' + currentSong).play();
 }
 
 function stopSong() {
-    document.getElementById('songPlayer').pause();
+    document.getElementById('songPlayer' + currentSong).pause();
 }

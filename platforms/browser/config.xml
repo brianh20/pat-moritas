@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.patmoritas.album" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>pat-moritas</name>
+    <name>Pat Moritas</name>
+    <icon src="img/icon.png" />
     <description>
-        A blank PhoneGap app.
+        A digital app for 8-bit music from Pat Moritas
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="brian.hume@live.com">
         PhoneGap Team
     </author>
     <content src="index.html" />
